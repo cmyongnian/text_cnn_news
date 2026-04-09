@@ -1,0 +1,2 @@
+experiment,use_keywords,best_epoch,best_val_macro_f1,test_loss,test_acc,test_macro_f1,model_path,report_path,figure_path
+exp1,False,6,0.4446,1.6895,0.4768,0.4571,E:\数据挖掘\实验3\text_cnn_news\textcnn_project\outputs\models\best_model_exp1.pth,E:\数据挖掘\实验3\text_cnn_news\textcnn_project\outputs\reports\classification_report_exp1.txt,E:\数据挖掘\实验3\text_cnn_news\textcnn_project\outputs\figs\exp1_loss_curve.png

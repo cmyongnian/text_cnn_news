@@ -1,0 +1,31 @@
+experiment: exp1
+use_keywords: False
+best_epoch: 6
+best_val_macro_f1: 0.4446
+test_loss: 1.6895
+test_acc: 0.4768
+test_macro_f1: 0.4571
+
+classification_report
+============================================================
+                    precision    recall  f1-score   support
+
+        news_story     0.4121    0.3488    0.3778       215
+      news_culture     0.3521    0.5177    0.4191       736
+news_entertainment     0.4457    0.5187    0.4794       910
+       news_sports     0.6894    0.5528    0.6136       767
+      news_finance     0.4253    0.4885    0.4547       956
+        news_house     0.5982    0.5159    0.5540       378
+          news_car     0.6101    0.5044    0.5522       791
+          news_edu     0.4957    0.5294    0.5120       646
+         news_tech     0.4752    0.4573    0.4661      1089
+     news_military     0.4920    0.3883    0.4340       716
+       news_travel     0.4772    0.3175    0.3813       693
+        news_world     0.4186    0.5061    0.4582       905
+        news_stock     0.5556    0.1111    0.1852        45
+  news_agriculture     0.3716    0.4453    0.4052       494
+         news_game     0.6362    0.5068    0.5642       659
+
+          accuracy                         0.4768     10000
+         macro avg     0.4970    0.4472    0.4571     10000
+      weighted avg     0.4925    0.4768    0.4786     10000
