@@ -4,7 +4,7 @@ vocab_size: 5000
 num_classes: 15
 
 paths:
-  raw_dir: data
+  raw_dir: data/raw
   processed_dir: data/processed
   output_dir: outputs
 
