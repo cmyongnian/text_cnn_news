@@ -1,9 +1,10 @@
 seed: 42
 max_len: 50
+vocab_size: 5000
 num_classes: 15
 
 paths:
-  raw_dir: data/raw
+  raw_dir: data
   processed_dir: data/processed
   output_dir: outputs
 
