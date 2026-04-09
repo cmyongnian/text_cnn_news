@@ -105,7 +105,13 @@ def main():
     train_key_mask_path = processed_dir / "train_key_mask.pt"
     test_key_mask_path = processed_dir / "test_key_mask.pt"
 
-    required_files = [vocab_path, train_seq_path, test_seq_path, train_key_mask_path, test_key_mask_path]
+    required_files = [
+        vocab_path,
+        train_seq_path,
+        test_seq_path,
+        train_key_mask_path,
+        test_key_mask_path,
+    ]
     missing_files = [str(p) for p in required_files if not p.exists()]
     if missing_files:
         raise FileNotFoundError(

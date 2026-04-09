@@ -64,6 +64,9 @@ def prepare_samples(data):
 
 
 def build_vocab(train_samples, max_vocab_size: int):
+    """
+    词表只根据训练集 sentence 构建，避免信息泄漏。
+    """
     counter = Counter()
     for item in train_samples:
         counter.update(item["sentence_tokens"])
@@ -91,6 +94,9 @@ def encode_tokens(tokens, token2id, max_len: int):
 
 
 def build_key_mask(sentence_tokens, keyword_tokens, max_len: int):
+    """
+    对 sentence 中命中的关键词 token 标 1，否则标 0。
+    """
     keyword_set = set(keyword_tokens)
     mask = [1 if tok in keyword_set else 0 for tok in sentence_tokens[:max_len]]
     if len(mask) < max_len:
@@ -140,6 +146,9 @@ def build_statistics_text(train_samples, test_samples, token2id, max_len: int):
         for x in test_samples
     ]
 
+    train_empty_keywords = sum(1 for x in train_samples if len(x["keyword_tokens"]) == 0)
+    test_empty_keywords = sum(1 for x in test_samples if len(x["keyword_tokens"]) == 0)
+
     lines = [
         "数据统计",
         "=" * 40,
@@ -150,15 +159,17 @@ def build_statistics_text(train_samples, test_samples, token2id, max_len: int):
         "",
         "句长统计",
         "-" * 40,
-        f"train_avg_len: {mean(train_lengths):.2f}",
+        f"train_avg_len: {mean(train_lengths):.2f}" if train_lengths else "train_avg_len: 0",
         f"train_max_len: {max(train_lengths) if train_lengths else 0}",
-        f"test_avg_len: {mean(test_lengths):.2f}",
+        f"test_avg_len: {mean(test_lengths):.2f}" if test_lengths else "test_avg_len: 0",
         f"test_max_len: {max(test_lengths) if test_lengths else 0}",
         "",
-        "关键词命中统计（句子截断到 max_len 后按 token 命中）",
+        "关键词统计",
         "-" * 40,
-        f"train_avg_keyword_hits: {mean(train_keyword_hits):.2f}",
-        f"test_avg_keyword_hits: {mean(test_keyword_hits):.2f}",
+        f"train_empty_keywords: {train_empty_keywords}",
+        f"test_empty_keywords: {test_empty_keywords}",
+        f"train_avg_keyword_hits: {mean(train_keyword_hits):.2f}" if train_keyword_hits else "train_avg_keyword_hits: 0",
+        f"test_avg_keyword_hits: {mean(test_keyword_hits):.2f}" if test_keyword_hits else "test_avg_keyword_hits: 0",
     ]
     return "\n".join(lines)
 
@@ -173,8 +184,18 @@ def main():
 
     ensure_dir(processed_dir)
 
-    train_raw = read_jsonl(raw_dir / "train.json")
-    test_raw = read_jsonl(raw_dir / "test.json")
+    train_path = raw_dir / "train.json"
+    test_path = raw_dir / "test.json"
+
+    if not train_path.exists() or not test_path.exists():
+        raise FileNotFoundError(
+            f"未找到原始数据文件。\n"
+            f"当前读取目录: {raw_dir}\n"
+            f"请确认 config.yaml 中 paths.raw_dir 指向包含 train.json / test.json / labels.json 的目录。"
+        )
+
+    train_raw = read_jsonl(train_path)
+    test_raw = read_jsonl(test_path)
 
     train_samples = prepare_samples(train_raw)
     test_samples = prepare_samples(test_raw)
