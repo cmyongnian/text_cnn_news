@@ -2,11 +2,17 @@ seed: 42
 max_len: 50
 num_classes: 15
 
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  output_dir: outputs
+
 model:
   embed_dim: 200
   num_filters: 100
   kernel_sizes: [3, 4, 5]
   dropout: 0.5
+  keyword_scale: 0.5
 
 train:
   batch_size: 64
