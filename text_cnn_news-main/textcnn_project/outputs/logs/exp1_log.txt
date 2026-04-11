@@ -1,0 +1,21 @@
+epoch=01 | train_loss=2.3139 | val_loss=1.9830 | val_acc=0.3713 | val_macro_f1=0.3322
+epoch=02 | train_loss=1.8950 | val_loss=1.8094 | val_acc=0.4174 | val_macro_f1=0.3788
+epoch=03 | train_loss=1.6667 | val_loss=1.7356 | val_acc=0.4443 | val_macro_f1=0.4043
+epoch=04 | train_loss=1.5088 | val_loss=1.7099 | val_acc=0.4543 | val_macro_f1=0.4268
+epoch=05 | train_loss=1.3737 | val_loss=1.7158 | val_acc=0.4593 | val_macro_f1=0.4319
+epoch=06 | train_loss=1.2731 | val_loss=1.7319 | val_acc=0.4676 | val_macro_f1=0.4431
+epoch=07 | train_loss=1.1783 | val_loss=1.7683 | val_acc=0.4695 | val_macro_f1=0.4475
+epoch=08 | train_loss=1.0986 | val_loss=1.8168 | val_acc=0.4640 | val_macro_f1=0.4391
+epoch=09 | train_loss=1.0317 | val_loss=1.8564 | val_acc=0.4601 | val_macro_f1=0.4393
+epoch=10 | train_loss=0.9659 | val_loss=1.9139 | val_acc=0.4636 | val_macro_f1=0.4346
+early stopping triggered at epoch 10
+
+best_epoch=7
+best_val_macro_f1=0.4475
+test_loss=1.9620
+test_acc=0.3798
+test_macro_f1=0.3431
+elapsed_seconds=196.59
+model_path=G:\z-2601数据挖掘\shiyan3\text_cnn_news-main\textcnn_project\outputs\models\best_model_exp1.pth
+report_path=G:\z-2601数据挖掘\shiyan3\text_cnn_news-main\textcnn_project\outputs\reports\classification_report_exp1.txt
+figure_path=G:\z-2601数据挖掘\shiyan3\text_cnn_news-main\textcnn_project\outputs\figs\exp1_loss_curve.png
