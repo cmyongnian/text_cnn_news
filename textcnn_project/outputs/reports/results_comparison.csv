@@ -1,3 +1,0 @@
-experiment,use_keywords,best_epoch,best_val_macro_f1,test_loss,test_acc,test_macro_f1,model_path,report_path,figure_path
-exp1,False,7,0.4475,1.9620,0.3798,0.3431,G:\z-2601数据挖掘\shiyan3\text_cnn_news-main\textcnn_project\outputs\models\best_model_exp1.pth,G:\z-2601数据挖掘\shiyan3\text_cnn_news-main\textcnn_project\outputs\reports\classification_report_exp1.txt,G:\z-2601数据挖掘\shiyan3\text_cnn_news-main\textcnn_project\outputs\figs\exp1_loss_curve.png
-exp2,True,10,0.4436,1.8290,0.4858,0.4659,G:\z-2601数据挖掘\shiyan3\text_cnn_news-main\textcnn_project\outputs\models\best_model_exp2.pth,G:\z-2601数据挖掘\shiyan3\text_cnn_news-main\textcnn_project\outputs\reports\classification_report_exp2.txt,G:\z-2601数据挖掘\shiyan3\text_cnn_news-main\textcnn_project\outputs\figs\exp2_loss_curve.png

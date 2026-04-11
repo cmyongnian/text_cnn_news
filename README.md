@@ -46,6 +46,9 @@ python train.py --exp exp1
 第三步：运行实验二
 python train.py --exp exp2
 
+第四步：运行数据分析
+python analyze_results.py --exp exp1
+python analyze_results.py --exp exp2
 
 
 ## 1. 项目目标

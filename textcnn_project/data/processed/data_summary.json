@@ -1,0 +1,12 @@
+{
+  "raw_dir": "data\\raw",
+  "num_train": 53360,
+  "num_test": 10000,
+  "vocab_size": 20000,
+  "max_len": 80,
+  "max_keyword_len": 16,
+  "avg_train_sentence_len": 12.82,
+  "avg_test_sentence_len": 12.85,
+  "avg_train_keyword_len": 5.59,
+  "avg_test_keyword_len": 5.56
+}

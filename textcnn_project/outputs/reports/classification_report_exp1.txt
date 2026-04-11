@@ -1,31 +1,32 @@
 experiment: exp1
 use_keywords: False
-best_epoch: 7
-best_val_macro_f1: 0.4475
-test_loss: 1.9620
-test_acc: 0.3798
-test_macro_f1: 0.3431
+best_epoch: 12
+best_val_macro_f1: 0.4730
+test_loss: 2.2514
+test_acc: 0.4991
+test_macro_f1: 0.4799
+elapsed_seconds: 1568.43
 
 classification_report
 ============================================================
                     precision    recall  f1-score   support
 
-        news_story     0.4744    0.1721    0.2526       215
-      news_culture     0.3541    0.3777    0.3655       736
-news_entertainment     0.2525    0.6319    0.3608       910
-       news_sports     0.4598    0.4329    0.4459       767
-      news_finance     0.3421    0.4477    0.3879       956
-        news_house     0.6132    0.3439    0.4407       378
-          news_car     0.4502    0.4058    0.4269       791
-          news_edu     0.3445    0.3824    0.3624       646
-         news_tech     0.3923    0.3747    0.3833      1089
-     news_military     0.4486    0.1522    0.2273       716
-       news_travel     0.4508    0.2049    0.2817       693
-        news_world     0.4171    0.4751    0.4442       905
-        news_stock     0.0000    0.0000    0.0000        45
-  news_agriculture     0.5337    0.1923    0.2827       494
-         news_game     0.6073    0.4036    0.4850       659
+        news_story     0.3580    0.2930    0.3223       215
+      news_culture     0.4308    0.4946    0.4605       736
+news_entertainment     0.4841    0.5670    0.5223       910
+       news_sports     0.7060    0.5854    0.6401       767
+      news_finance     0.4046    0.5523    0.4670       956
+        news_house     0.5530    0.5794    0.5659       378
+          news_car     0.6582    0.5601    0.6052       791
+          news_edu     0.4688    0.5697    0.5143       646
+         news_tech     0.5330    0.3930    0.4524      1089
+     news_military     0.4611    0.4721    0.4665       716
+       news_travel     0.4391    0.4214    0.4300       693
+        news_world     0.4821    0.3867    0.4292       905
+        news_stock     0.2895    0.2444    0.2651        45
+  news_agriculture     0.5023    0.4453    0.4721       494
+         news_game     0.5622    0.6100    0.5852       659
 
-          accuracy                         0.3798     10000
-         macro avg     0.4094    0.3331    0.3431     10000
-      weighted avg     0.4185    0.3798    0.3740     10000
+          accuracy                         0.4991     10000
+         macro avg     0.4888    0.4783    0.4799     10000
+      weighted avg     0.5078    0.4991    0.4990     10000

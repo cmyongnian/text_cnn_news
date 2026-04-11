@@ -1,0 +1,21 @@
+                    precision    recall  f1-score   support
+
+        news_story     0.3580    0.2930    0.3223       215
+      news_culture     0.4308    0.4946    0.4605       736
+news_entertainment     0.4841    0.5670    0.5223       910
+       news_sports     0.7060    0.5854    0.6401       767
+      news_finance     0.4046    0.5523    0.4670       956
+        news_house     0.5530    0.5794    0.5659       378
+          news_car     0.6582    0.5601    0.6052       791
+          news_edu     0.4688    0.5697    0.5143       646
+         news_tech     0.5330    0.3930    0.4524      1089
+     news_military     0.4611    0.4721    0.4665       716
+       news_travel     0.4391    0.4214    0.4300       693
+        news_world     0.4821    0.3867    0.4292       905
+        news_stock     0.2895    0.2444    0.2651        45
+  news_agriculture     0.5023    0.4453    0.4721       494
+         news_game     0.5622    0.6100    0.5852       659
+
+          accuracy                         0.4991     10000
+         macro avg     0.4888    0.4783    0.4799     10000
+      weighted avg     0.5078    0.4991    0.4990     10000

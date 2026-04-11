@@ -1,0 +1,10 @@
+{
+  "experiment": "exp2",
+  "use_keywords": true,
+  "best_epoch": 19,
+  "best_val_macro_f1": 0.497112,
+  "test_loss": 2.593754,
+  "test_acc": 0.5047,
+  "test_macro_f1": 0.486158,
+  "elapsed_seconds": 2381.3
+}
